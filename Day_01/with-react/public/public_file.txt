@@ -1,0 +1,1 @@
+This is the public file which will be publically accessible by using '/' forward operator on url.
