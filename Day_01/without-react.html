@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Without Using React Powers</title>
+    <style>
+      .box {
+        color: red;
+        height: 121px;
+        width: 121px;
+        border: 2px solid black;
+        padding: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="counter">0</div>
+    <button id="btn">Click me</button>
+  </body>
+
+  <script>
+    document.getElementById("btn").addEventListener("click", () => {
+      let num = parseInt(document.getElementById("counter").innerHTML);
+      document.getElementById("counter").innerHTML = num + 1;
+    });
+  </script>
+</html>
