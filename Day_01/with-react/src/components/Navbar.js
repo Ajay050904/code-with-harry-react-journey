@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 const Navbar = (props) => {
   return (
     <div>
@@ -7,6 +8,7 @@ const Navbar = (props) => {
         <li>About</li>
         <li>Contact Us</li>
       </ul>
+      <Footer/>
     </div>
   );
 };

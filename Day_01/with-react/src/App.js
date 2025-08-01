@@ -1,12 +1,13 @@
 import "./App.css";
 import { useState } from "react";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   const [value, setValue] = useState(0);
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar logoText="codwithharry"/>
       <div className="value">{value}</div>
       <button
         onClick={() => {
@@ -15,6 +16,7 @@ function App() {
       >
         Click me
       </button>
+      <Footer/>
     </div>
   );
 }

@@ -29,9 +29,7 @@
         "formulahendry.auto-rename-tag",
         "xabikos.JavaScriptSnippets",
         "ritwickdey.LiveServer", // ✅ Live Server extension
-        "dsznajder.es7-react-js-snippets", // ✅ ES7+ React/Redux snippets
-		"rodrigovallades.es7-react-js-snippets"
-        
+        "dsznajder.es7-react-js-snippets" // ✅ ES7+ React/Redux snippets
       ]
     }
   }
