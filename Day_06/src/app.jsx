@@ -1,10 +1,34 @@
-import { useState } from 'preact/hooks'
-import preactLogo from './assets/preact.svg'
-import viteLogo from '/vite.svg'
-import './app.css'
+import { useState } from "preact/hooks";
+import preactLogo from "./assets/preact.svg";
+import viteLogo from "/vite.svg";
+import "./app.css";
 
 export function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [showBtn, setShowBtn] = useState(false);
+  const [todos, setToDOs] = useState([
+    {
+      title: "Hey",
+      desc: "I am a good todo",
+    },
+    {
+      title: "Hi",
+      desc: "I am a bad todo",
+    },
+    {
+      title: "Hello",
+      desc: "I am both good and bad todo",
+    },
+  ]);
+
+  const ToDo = (todo) => {
+    return (
+      <>
+        <div className="todo">{todo.title}</div>
+        <div className="todo">{todo.desc}</div>
+      </>
+    );
+  };
 
   return (
     <>
@@ -17,16 +41,29 @@ export function App() {
         </a>
       </div>
       <h1>Vite + Preact</h1>
+      {/* {showBtn ? <button>I will  be only shown when second button is clicked</button> : "NUll"} */}
+      {/* {showBtn &&  <button>showBtn is true</button>} */}
+      {/* If we want to use else condition then we will use above method */}
+      {showBtn ? (
+        <button>showBtn is true</button>
+      ) : (
+        <button>showBtn is false</button>
+      )}
+      
+      {/* <ToDo /> */}
+      {/* To display all todos - for loop */}
+      {todos.map((todo) => (
+        <ToDo todo={todo} />
+      ))}
+
       <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={() => setShowBtn(!showBtn)}>Toggle show btn</button>
         <p>
           Edit <code>src/app.jsx</code> and save to test HMR
         </p>
       </div>
       <p>
-        Check out{' '}
+        Check out{" "}
         <a
           href="https://preactjs.com/guide/v10/getting-started#create-a-vite-powered-preact-app"
           target="_blank"
@@ -39,5 +76,5 @@ export function App() {
         Click on the Vite and Preact logos to learn more
       </p>
     </>
-  )
+  );
 }
