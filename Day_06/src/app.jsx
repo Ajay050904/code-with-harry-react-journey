@@ -50,7 +50,7 @@ export function App() {
         <button>showBtn is true</button>
       ) : (
         <button>showBtn is false</button>
-      )}
+      )} 
 
       {/* <Todo /> */}
       {/* To display all todos - for loop */}
@@ -85,6 +85,7 @@ export function App() {
       <p class="read-the-docs">
         Click on the Vite and Preact logos to learn more
       </p>
+       <h1> I am last one</h1>
     </>
   );
 }
