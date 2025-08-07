@@ -21,11 +21,13 @@ export function App() {
     },
   ]);
 
-  const ToDo = (todo) => {
+  const Todo = ({ todo }) => {
     return (
       <>
-        <div className="todo">{todo.title}</div>
-        <div className="todo">{todo.desc}</div>
+        <div className="m-4 border border-1 border-purple-400">
+          <div className="todo">{todo.title}</div>
+          <div className="todo">{todo.desc}</div>
+        </div>
       </>
     );
   };
@@ -49,11 +51,11 @@ export function App() {
       ) : (
         <button>showBtn is false</button>
       )}
-      
-      {/* <ToDo /> */}
+
+      {/* <Todo /> */}
       {/* To display all todos - for loop */}
       {todos.map((todo) => (
-        <ToDo todo={todo} />
+        <Todo todo={todo} />
       ))}
 
       <div class="card">
