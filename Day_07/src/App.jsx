@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
-import './App.css'
+import './App.css';
 
 function App() {
   const [cards, setCards] = useState([])
