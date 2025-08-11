@@ -47,6 +47,14 @@ function App() {
         value={form.phone}
         onChange={handleChange}
       />
+
+      {/* to add defalut value -->     const [form, setForm] = useState({}) */}
+      {/* <input
+        type="text"
+        name="phone"
+        value={form.phone? form.phone:"0000000"}
+        onChange={handleChange}
+      /> */}
     </>
   );
 }
