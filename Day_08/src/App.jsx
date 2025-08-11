@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   // eslint-disable-next-line no-unused-vars
   // const [name, setName] = useState("MAHAM");
-  const [form, setForm] = useState({email: "", phone: ""});
+  const [form, setForm] = useState({ email: "", phone: "" });
 
   const handleClick = () => {
     alert("Hey I am clicked");
@@ -19,12 +19,9 @@ function App() {
   // };
 
   const handleChange = (e) => {
-    setForm({...form,[e.target.name]:e.target.value});
+    setForm({ ...form, [e.target.name]: e.target.value });
     console.log(form);
-    
   };
-
-
 
   return (
     <>
