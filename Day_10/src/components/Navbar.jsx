@@ -1,8 +1,14 @@
 import React from 'react'
+import Button from './Button'
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <>
+    <div>
+      Navbar
+    </div>
+    <Button/>
+    </>
   )
 }
 
