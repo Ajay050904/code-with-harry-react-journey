@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Component1 from "./Component1";
+import Component1 from "./Component1"
 import { counterContext } from "../context/context";
 
 const Button = () => {
