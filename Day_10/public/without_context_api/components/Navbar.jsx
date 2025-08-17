@@ -1,10 +1,10 @@
 import Button from "./Button";
 
-const Navbar = () => {
+const Navbar = ({ count }) => {
   return (
     <>
       <div>Navbar</div>
-      <Button />
+      <Button count={count} />
     </>
   );
 };
