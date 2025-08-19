@@ -18,7 +18,7 @@ function App() {
   const magical = useMemo(
     () => numbers.find((item) => item.isMagical === true),
     [numbers]
-  ); //  Computation {memoziation}
+  ); // easy Computation and don't take time in re-rendering  {memoziation}
 
   return (
     <>
