@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { useMemo } from "react";
 
 const nums = new Array(30_000_000).fill(0).map((_, i) => {
   return {
@@ -14,7 +15,10 @@ function App() {
   const [count, setCount] = useState(0);
   const [numbers, seNumbers] = useState(nums);
 
-  const magical = numbers.find((item) => item.isMagical === true);
+  // const magical = numbers.find((item) => item.isMagical === true); // Expensive Computation
+  const magical = useMemo(() =>
+    numbers.find((item) => item.isMagical === true), []
+  ); //  Computation {memoziation}
 
   return (
     <>
