@@ -3,7 +3,6 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-const [count, setCount] = useState(0);
 const nums = new Array(30_000_000).fill(0).map((_, i) => {
   return {
     index: i,
@@ -12,9 +11,15 @@ const nums = new Array(30_000_000).fill(0).map((_, i) => {
 });
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [numbers, seNumbers] = useState(nums);
+
+  const magical = numbers.find((item) => item.isMagical === true);
+
   return (
     <>
       <div>
+        <span>Magical number is {magical.index}</span>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
