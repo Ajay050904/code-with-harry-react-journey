@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
   const [adjective, setAdjective] = useState("good");
 
   // const getAdjective = () => {
@@ -22,7 +23,7 @@ function App() {
   // useCallback freezes a function
   const getAdjective = useCallback(() => {
     return "another"  + count;
-  }, []);
+  }, [count]);
 
   return (
     <>
