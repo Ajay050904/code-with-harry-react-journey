@@ -14,15 +14,13 @@ function App() {
   //   return "another";
   // };
 
-
-// const getAdjective = () => {
-//     return "another"  + count;
-//   };
-
+  // const getAdjective = () => {
+  //     return "another"  + count;
+  //   };
 
   // useCallback freezes a function
   const getAdjective = useCallback(() => {
-    return "another"  + count;
+    return "another" + count;
   }, [count]);
 
   return (
