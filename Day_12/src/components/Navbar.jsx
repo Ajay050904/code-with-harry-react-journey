@@ -8,9 +8,11 @@ const Navbar = ({ adjective, getAdjective }) => {
       I am a {adjective} Navbar
       <button
         onClick={() => {
-          getAdjective;
+          getAdjective();
         }}
-      >change me</button>
+      >
+        {getAdjective()}
+      </button>
     </div>
   );
 };
